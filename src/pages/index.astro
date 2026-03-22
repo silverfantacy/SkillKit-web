@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import Screenshots from "../components/Screenshots";
+import Tools from "../components/Tools";
+import CTA from "../components/CTA";
+import Footer from "../components/Footer";
+---
+
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="SkillKit — macOS 原生 AI 技能管理工具。統一管理 Claude、OpenClaw 等工具的技能，支援標籤分類、情境切換、Git 備份與自動更新偵測。" />
+    <meta property="og:title" content="SkillKit — AI 技能庫管理工具" />
+    <meta property="og:description" content="統一管理你所有 AI 工具的技能，macOS 原生，完全開源。" />
+    <meta property="og:image" content="/icon.png" />
+    <title>SkillKit — AI 技能庫管理工具</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <Hero client:load />
+    <Features client:visible />
+    <Screenshots client:visible />
+    <Tools client:visible />
+    <CTA client:visible />
+    <Footer />
+  </body>
+</html>

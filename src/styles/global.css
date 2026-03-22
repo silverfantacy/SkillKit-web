@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #09090f;
+  color: #e2e2f0;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shimmer text */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #7c6ff7 0%,
+    #c4b5fd 35%,
+    #7c6ff7 60%,
+    #a89af9 80%,
+    #7c6ff7 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+/* Grid pattern bg */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(124, 111, 247, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 111, 247, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Glow orb pulse */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.7; }
+}
+
+.glow-orb {
+  animation: glow-pulse 5s ease-in-out infinite;
+}
+
+/* Beam animation */
+@keyframes beam-move {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(200%) rotate(45deg); }
+}
+
+.beam {
+  animation: beam-move 3.5s ease-in-out infinite;
+}
+
+/* Card shimmer border */
+@keyframes border-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card-border {
+  background: linear-gradient(135deg, rgba(124,111,247,0.4), rgba(196,181,253,0.2), rgba(124,111,247,0.4));
+  background-size: 200% 200%;
+  animation: border-shimmer 4s ease infinite;
+}
