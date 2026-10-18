@@ -1,0 +1,8 @@
+
+# Openship production context
+.git
+**/node_modules
+**/.next
+**/dist
+**/.env*
+!**/package-lock.json
